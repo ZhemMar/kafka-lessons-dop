@@ -21,6 +21,8 @@ public class ConsumerKafkaConfig {
         /** Подключения к Kafka-брокеру BOOTSTRAP_SERVERS */
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
 
+        properties.put(ConsumerConfig.ISOLATION_LEVEL_CONFIG, "read_committed");
+
         /** Идентификатор группы потребителей (consumer group ID) */
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, GROUP_ID);
 
